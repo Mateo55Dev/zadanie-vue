@@ -45,11 +45,12 @@ import IconFavourite from './icons/IconFavourite.vue';
     box-sizing: border-box;
     background-color: #ff9393;
     cursor: pointer;
+    
     .recipe-image {
       position: relative;
       img {
-        width: 100%;
-        height: auto;
+        width: 295px;
+        height: 200px;
         display: block;
         border-radius: 10px;
         filter: brightness(80%);

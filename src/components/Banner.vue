@@ -12,7 +12,10 @@
 
 <template>
     <div class="banner">
+      <RouterLink to="/">
         <IconLogo/>
+      </RouterLink>
+
         <div class="user">
             <div v-for="user in users">
                 <div class="user-img-name">

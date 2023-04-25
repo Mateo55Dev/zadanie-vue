@@ -1,14 +1,12 @@
 <script setup>
-import HomeView from '../views/HomeView.vue';
-import Favourites from '../views/FavouritesView.vue'
-import AddRecipe from '../views/addRecipeView.vue'
+
 </script>
 
 <template>
     <nav>
-        <RouterLink to="/"><HomeView/></RouterLink>
-        <RouterLink to="/favourites"><Favourites/></RouterLink>
-        <RouterLink to="/addRecipe"><AddRecipe/></RouterLink>
+        <RouterLink to="/"><h1>Wszystkie przepisy</h1></RouterLink>
+        <RouterLink to="/favourites"><h1>Ulubione</h1></RouterLink>
+        <RouterLink to="/addRecipe"><h1>Dodaj przepis</h1></RouterLink>
     </nav>
 </template>
 

@@ -17,9 +17,9 @@ import Feed from '../components/Feed.vue';
 
         <main>
             <div class="container">
-                <SearchBar/>
+                <!-- <SearchBar/> -->
                 <slot></slot>
-                <Feed/>
+                <!-- <Feed/> -->
             </div>
         </main>
     </div>

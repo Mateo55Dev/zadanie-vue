@@ -4,5 +4,6 @@ import Feed from '../components/Feed.vue';
 </script>
 
 <template>
-  <h1>Wszystkie przepisy</h1>
+  <SearchBar/>
+  <Feed/>
 </template>
