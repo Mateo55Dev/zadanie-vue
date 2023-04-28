@@ -23,6 +23,7 @@
             background-color: #ff9393;
             margin: 5px 0px 5px 0px;
             border-radius: 8px;
+            color: white;
         }
     }
 </style>

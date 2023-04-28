@@ -6,7 +6,7 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: () => import('../views/HomeView.vue')
+      component: () => import('../views/HomeView.vue'),
     },
     // {
     //   path: '/allRecipes',
@@ -16,17 +16,17 @@ const router = createRouter({
     {
       path: '/favourites',
       name: 'favourites',
-      component: () => import('../views/FavouritesView.vue')
+      component: () => import('../views/FavouritesView.vue'),
     },
     {
       path: '/addRecipe',
       name: 'addRecipe',
-      component: () => import('../views/AddRecipeView.vue')
+      component: () => import('../views/AddRecipeView.vue'),
     },
     {
       path: '/recipeDetails/:id',
       name: 'recipeDetails',
-      component: () => import('../views/RecipeDetailsView.vue')
+      component: () => import('../views/RecipeDetailsView.vue'),
     }
   ]
 })
