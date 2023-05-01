@@ -1,31 +1,35 @@
 <script setup>
-    import router from '@/router'
-import IconFavourite from './icons/IconFavourite.vue';
-    const props = defineProps(['recipe']);
+  import router from '@/router'
+  import IconFavouriteEmpty from './icons/IconFavouriteEmpty.vue';
+  import IconFavouriteFilled from './icons/IconFavouriteFilled.vue';
+  const props = defineProps(['recipe']);
 
-    function goToRecipeDetails(){
-        router.push(`/recipes/${props.recipe.id}`)
-    }
+  function goToRecipeDetails(){
+    router.push(`/recipes/${props.recipe.id}`)
+  }
 
-    function toogleLike(recipe){
-        if(!recipe.isLike){
-            recipe.isLike = 'true';
-        }
-        else{
-            recipe.isLike = 'false';
-        }
-    }
+  function trimText(text, length) {
+  if (text.length > length) {
+    const trimmedText = text.slice(0, length);
+    const lastSpace = trimmedText.lastIndexOf(" ");
+    return trimmedText.slice(0, lastSpace) + "...";
+  } 
+  else {
+    return text;
+  }
+}
 </script>
 
 <template>
     <div class="recipe" @click="goToRecipeDetails">
         <div class="recipe-image">
             <img :src="recipe.image" :alt="recipe.title">
-            <span @click="toogleLike(recipe)" class="like-icon"><IconFavourite/></span>
+            <span v-if="!recipe.isLiked" @click.stop class="like-icon"><IconFavouriteEmpty/></span>
+            <span v-else @click.stop class="like-icon"><IconFavouriteFilled/></span>
         </div>
         <div class="recipe-info">
             <h2>{{ recipe.title }}</h2>
-            <p>{{ recipe.description }}</p>
+            <p>{{ trimText(recipe.description, 160) }}</p>
         </div>
     </div>
 </template>
@@ -53,10 +57,11 @@ import IconFavourite from './icons/IconFavourite.vue';
         height: 200px;
         display: block;
         border-radius: 10px;
-        filter: brightness(80%);
+        filter: brightness(70%);
         &:hover{
           filter: brightness(100%);
-          transition: all 0.4s ease;
+          scale: 1.01;
+          transition: all 0.4s ease-in-out;
         }
       }
     }
@@ -66,11 +71,10 @@ import IconFavourite from './icons/IconFavourite.vue';
         right: 10px;
         font-size: 24px;
         & :hover{
-            cursor: pointer;
+            cursor: copy;
+            scale: 1.04;
+            transition: all 0.4s ease-in-out;
         }
-        svg path{
-            fill: red;
-          }
       }
     }
     .recipe-info {
