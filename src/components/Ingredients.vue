@@ -1,7 +1,4 @@
 <script setup>
-
-var showInput = false;
-
 </script>
 
 <template>
@@ -10,7 +7,7 @@ var showInput = false;
         <input type="text" placeholder="Ilość">
         <button style="font-size: 24px; font-weight: bold;">+</button>
         <button style="font-size: 24px; font-weight: bold;">-</button>
-    </div>    
+    </div> 
   </template>
 
 <style lang="scss" scoped>
@@ -19,12 +16,13 @@ var showInput = false;
         flex-direction: row;
         display: grid;
         grid-template-columns: 1fr 70px 0.2fr 0.2fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-rows: 1fr;
     
         button{
             background: #ff9393;
             border: none;
             margin: 0 0 0 5px;
+            border-radius: 5px;
         }
         input{
             padding: 5px 2px;

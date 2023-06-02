@@ -2,6 +2,7 @@
   import router from '@/router'
   import IconFavouriteEmpty from './icons/IconFavouriteEmpty.vue';
   import IconFavouriteFilled from './icons/IconFavouriteFilled.vue';
+  
   const props = defineProps(['recipe']);
 
   function goToRecipeDetails(){

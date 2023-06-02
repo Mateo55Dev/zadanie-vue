@@ -61,10 +61,11 @@ const recipes = ref([
 </script>
 
 <template>
-    <div class="feed">
-        <RecipeCard v-for="recipe in recipes" :key="recipe.id" :recipe="recipe"/>
+    <div class="favourites-view">
+    <div v-for="recipe in favouriteRecipes" :key="recipe.id">
+      {{ recipe.title }}
     </div>
-    <p>(z str. https://fajnegotowanie.pl/-do usunięcia)</p>
+  </div>
 </template>
 
 <style lang="scss" scoped>

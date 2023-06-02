@@ -94,14 +94,5 @@ import Ingredients from '../components/Ingredients.vue';
             border: none;
             margin: 50px 0 0 320px;
         }
-        .title{
-            // background-color: rebeccapurple;
-        }
-        .level{
-            // background-color: brown;
-        }
-        .time{
-            // background-color: yellowgreen;
-        }
     }
 </style>

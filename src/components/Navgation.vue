@@ -7,6 +7,7 @@
         <RouterLink to="/"><h1>Wszystkie przepisy</h1></RouterLink>
         <RouterLink to="/favourites"><h1>Ulubione</h1></RouterLink>
         <RouterLink to="/addRecipe"><h1>Dodaj przepis</h1></RouterLink>
+        <RouterLink to="/account"><h1>Konto</h1></RouterLink>
     </nav>
 </template>
 
