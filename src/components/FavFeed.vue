@@ -61,13 +61,68 @@ const recipes = ref([
 </script>
 
 <template>
-    <div class="favourites-view">
-    <div v-for="recipe in favouriteRecipes" :key="recipe.id">
-      {{ recipe.title }}
+    <div class="feed">
+        <div class="recipe" v-for="recipe in recipes">
+            <RecipeCard v-if="recipe.isLiked" :key="recipe.id" :recipe="recipe"/>
+        </div>
+        
     </div>
-  </div>
+    <p>(z str. https://fajnegotowanie.pl/-do usunięcia)</p>
 </template>
 
 <style lang="scss" scoped>
+.feed {
+    display: flex;
+  .recipe {
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    margin: 10px;
+    width: calc(33.33% - 20px);
+
+    background-color: #ff9393;
+    cursor: pointer;
+    
+    .recipe-image {
+      position: relative;
+      img {
+        width: 295px;
+        height: 200px;
+        display: block;
+        border-radius: 10px;
+        filter: brightness(70%);
+        &:hover{
+          filter: brightness(100%);
+          scale: 1.01;
+          transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+      .like-icon {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        font-size: 24px;
+        & :hover{
+            cursor: copy;
+            scale: 1.04;
+            transition: all 0.4s ease-in-out;
+        }
+      }
+    }
+    .recipe-info {
+      padding: 10px;
+      h2 {
+        margin: 0;
+        font-size: 20px;
+        font-weight: bold;
+        color: rgb(210, 210, 210);
+      }
+      p {
+        margin: 0;
+        font-size: 14px;
+        color: #666;
+      }
+    }
+  }
 </style>
 

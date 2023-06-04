@@ -26,5 +26,9 @@
             border-radius: 8px;
             color: white;
         }
+        @media screen and (max-width: 1250px){
+            min-height: 500px;
+            max-width: 150px;
+        }
     }
 </style>
